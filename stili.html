@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Три варианта оформления — Фотоцентр «Цифра»</title>
+  <meta name="description" content="Три примера оформления сайта фотоцентра «Цифра» по мотивам вывески: афиша, сайт-афиша и витрина для соцсетей.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    :root {
+      --style-red: #c62828;
+      --style-red-deep: #8f1111;
+      --style-yellow: #ffd21f;
+    }
+
+    .style-lab {
+      padding: clamp(28px, 4vw, 56px) 0 0;
+    }
+
+    .style-lab__head {
+      max-width: 830px;
+    }
+
+    .style-lab__head h1 {
+      margin: 10px 0 16px;
+      font-size: clamp(36px, 5.8vw, 68px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .style-lab__head > p {
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: clamp(15px, 1.5vw, 18px);
+    }
+
+    .style-lab__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .style-examples {
+      display: grid;
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .style-example {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: clamp(20px, 3vw, 38px);
+      align-items: center;
+      padding: clamp(14px, 2vw, 22px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface-soft);
+    }
+
+    .style-example__visual {
+      position: relative;
+      min-height: 430px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--surface);
+      box-shadow: var(--shadow-card);
+    }
+
+    .style-example__copy {
+      padding: 8px 4px;
+    }
+
+    .style-example__num {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .style-example h2 {
+      margin: 14px 0 10px;
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .style-example__copy > p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .style-features {
+      display: grid;
+      gap: 8px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .style-features li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .style-features li::before {
+      content: "";
+      position: absolute;
+      top: 0.45em;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--yellow-deep);
+      box-shadow: 0 0 0 3px rgba(255, 221, 45, 0.25);
+    }
+
+    .style-lab__note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      align-items: center;
+      margin-top: 24px;
+      padding: 20px 24px;
+      border: 1px solid rgba(16, 16, 16, 0.06);
+      border-radius: var(--radius-md);
+      background: var(--yellow-soft);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .style-lab__note span {
+      color: var(--muted);
+    }
+
+    /* ---------- 1. Афиша ---------- */
+
+    .poster {
+      position: relative;
+      isolation: isolate;
+      height: 100%;
+      min-height: 430px;
+      padding: clamp(18px, 2.4vw, 30px);
+      overflow: hidden;
+      background: var(--style-yellow);
+    }
+
+    .poster__dots,
+    .poster__rays {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .poster__dots {
+      background-image: radial-gradient(circle, rgba(16, 16, 16, 0.2) 1.3px, transparent 1.5px);
+      background-size: 9px 9px;
+      opacity: 0.55;
+    }
+
+    .poster__rays {
+      inset: -20% -10%;
+      background: repeating-conic-gradient(
+        from -7deg at 52% 34%,
+        transparent 0deg 10deg,
+        rgba(16, 16, 16, 0.25) 10deg 11.4deg
+      );
+      opacity: 0.72;
+      -webkit-mask-image: radial-gradient(circle at 52% 34%, transparent 0 15%, #000 58%);
+      mask-image: radial-gradient(circle at 52% 34%, transparent 0 15%, #000 58%);
+    }
+
+    .poster__top {
+      position: relative;
+      z-index: 2;
+    }
+
+    .poster__brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .poster__mark {
+      display: grid;
+      place-items: center;
+      width: clamp(46px, 5vw, 58px);
+      height: clamp(46px, 5vw, 58px);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--ink), 4px 4px 0 var(--ink);
+      color: var(--white);
+      font-size: clamp(34px, 4vw, 44px);
+      font-weight: 900;
+      line-height: 1;
+      text-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .poster__word {
+      color: var(--white);
+      font-size: clamp(48px, 6.6vw, 76px);
+      font-weight: 900;
+      line-height: 0.8;
+      letter-spacing: -0.06em;
+      -webkit-text-stroke: 2px var(--ink);
+      text-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .poster__sub {
+      margin-top: 10px;
+      color: var(--white);
+      font-size: clamp(19px, 2.6vw, 29px);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-align: center;
+      -webkit-text-stroke: 1px var(--ink);
+      text-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .poster__chips {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .poster__chips i {
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--ink);
+    }
+
+    .poster__chips i:nth-child(1) { background: #7ad9ef; }
+    .poster__chips i:nth-child(2) { background: #9bd35b; }
+    .poster__chips i:nth-child(3) { background: #ef9a9a; }
+
+    .poster__hours {
+      margin-top: clamp(16px, 3vw, 30px);
+      color: var(--white);
+      font-size: clamp(18px, 2.4vw, 26px);
+      font-weight: 900;
+      line-height: 1.02;
+      text-align: center;
+      -webkit-text-stroke: 1.2px var(--ink);
+      text-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .poster__time {
+      margin-top: 4px;
+      color: var(--white);
+      font-size: clamp(15px, 2vw, 21px);
+      font-weight: 900;
+      line-height: 1.15;
+      text-align: center;
+      -webkit-text-stroke: 1px var(--ink);
+      text-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .poster__red {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 31%;
+    }
+
+    .poster__contact {
+      position: absolute;
+      right: clamp(18px, 2.4vw, 30px);
+      bottom: clamp(16px, 2vw, 24px);
+      left: clamp(18px, 2.4vw, 30px);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      align-items: center;
+      color: var(--white);
+      font-size: clamp(13px, 1.6vw, 18px);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-shadow: 2px 2px 0 var(--ink);
+    }
+
+    /* ---------- 2. Сайт-афиша ---------- */
+
+    .mini-site {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 430px;
+      background: var(--white);
+    }
+
+    .mini-site__chrome {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--line);
+      background: #ecece6;
+      color: var(--muted);
+      font-size: 9px;
+    }
+
+    .mini-site__chrome i {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #c9c9c1;
+    }
+
+    .mini-site__url {
+      margin-left: 6px;
+      padding: 2px 9px;
+      border-radius: 999px;
+      background: var(--white);
+    }
+
+    .mini-site__hero {
+      position: relative;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      min-height: 280px;
+      padding: clamp(18px, 2.5vw, 30px);
+      overflow: hidden;
+      background: var(--style-yellow);
+    }
+
+    .mini-site__halftone {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(16, 16, 16, 0.16) 1.1px, transparent 1.3px);
+      background-size: 8px 8px;
+      opacity: 0.55;
+    }
+
+    .mini-site__red {
+      position: absolute;
+      top: -18%;
+      right: -13%;
+      width: 45%;
+      height: 145%;
+      background: var(--style-red);
+      clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%);
+      transform: rotate(13deg);
+    }
+
+    .mini-site__copy {
+      position: relative;
+      z-index: 3;
+      max-width: 64%;
+    }
+
+    .mini-site__eyebrow {
+      display: block;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .mini-site h3 {
+      margin: 8px 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 800;
+      line-height: 0.93;
+      letter-spacing: -0.05em;
+    }
+
+    .mini-site h3 em {
+      color: var(--style-red);
+      font-style: normal;
+      -webkit-text-stroke: 1px var(--ink);
+      text-shadow: 1px 1px 0 var(--white);
+    }
+
+    .mini-site__copy p {
+      max-width: 34ch;
+      font-size: 10px;
+      line-height: 1.4;
+      color: rgba(16, 16, 16, 0.72);
+    }
+
+    .mini-site__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .mini-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: var(--white);
+      box-shadow: 2px 2px 0 var(--ink);
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .mini-btn--dark {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .mini-site__badge {
+      position: absolute;
+      top: 18px;
+      right: 14px;
+      z-index: 4;
+      display: grid;
+      place-items: center;
+      width: clamp(58px, 7vw, 82px);
+      height: clamp(58px, 7vw, 82px);
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      background: var(--style-yellow);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-size: 9px;
+      font-weight: 800;
+      line-height: 1.05;
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(7deg);
+    }
+
+    .mini-site__badge strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .mini-site__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      padding: 10px;
+      border-top: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .mini-site__cards div {
+      padding: 8px;
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .mini-site__cards strong {
+      display: block;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .mini-site__cards span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 8px;
+    }
+
+    /* ---------- 3. Витрина и соцсети ---------- */
+
+    .social-board {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 100%;
+      min-height: 430px;
+      padding: 32px 18px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .social-board::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(16, 16, 16, 0.12) 1.1px, transparent 1.3px);
+      background-size: 9px 9px;
+      opacity: 0.55;
+    }
+
+    .social-board__sun {
+      position: absolute;
+      top: -90px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: var(--style-yellow);
+    }
+
+    .social-post {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex: 0 0 210px;
+      flex-direction: column;
+      min-height: 270px;
+      padding: 20px 16px;
+      border: 3px solid var(--ink);
+      background: var(--style-yellow);
+      box-shadow: 8px 8px 0 var(--ink);
+      transform: rotate(-3deg);
+    }
+
+    .social-post__kicker {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .social-post strong {
+      margin: auto 0;
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    .social-post strong small {
+      font-size: 24px;
+    }
+
+    .social-post__note {
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .social-post__logo {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 2px solid var(--ink);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .social-board__tags {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-tag {
+      position: relative;
+      z-index: 3;
+      width: 128px;
+      padding: 14px 12px;
+      border: 2px solid var(--ink);
+      box-shadow: 5px 5px 0 var(--ink);
+      transform: rotate(6deg);
+    }
+
+    .social-tag--yellow {
+      background: var(--white);
+    }
+
+    .social-tag--red {
+      background: var(--style-red);
+      color: var(--white);
+      transform: rotate(-5deg);
+    }
+
+    .social-tag span {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .social-tag strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .social-hours {
+      position: absolute;
+      bottom: 22px;
+      left: 24px;
+      z-index: 4;
+      padding: 10px 14px;
+      border: 2px solid var(--ink);
+      background: var(--white);
+      box-shadow: 4px 4px 0 var(--ink);
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1.35;
+      text-transform: uppercase;
+      transform: rotate(-2deg);
+    }
+
+    .social-hours strong {
+      display: block;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .style-example {
+        grid-template-columns: 1fr;
+      }
+
+      .style-example__visual {
+        min-height: 400px;
+      }
+
+      .style-example__copy {
+        padding: 4px 6px 8px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .style-example {
+        padding: 10px;
+        border-radius: var(--radius-md);
+      }
+
+      .style-example__visual {
+        min-height: 370px;
+      }
+
+      .poster {
+        min-height: 370px;
+      }
+
+      .poster__hours {
+        margin-top: 16px;
+      }
+
+      .mini-site,
+      .social-board {
+        min-height: 370px;
+      }
+
+      .social-board {
+        padding: 22px 16px;
+      }
+
+      .social-post {
+        flex-basis: 190px;
+        min-height: 250px;
+      }
+
+      .social-tag {
+        width: 112px;
+      }
+
+      .social-hours {
+        position: static;
+        order: 3;
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/>
+  </symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 16V4M7 9l5-5 5 5"/>
+    <path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/>
+  </symbol>
+</svg>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="12" fill="#101010"/>
+        <rect x="8" y="11" width="24" height="18" rx="3" fill="#FFDD2D"/>
+        <circle cx="15" cy="17" r="2" fill="#101010"/>
+        <path d="M10 26l6-6 4 4 3-3 7 5H10z" fill="#101010"/>
+      </svg>
+      <span class="logo__word"><strong>цифра</strong><span>фотоцентр</span></span>
+    </a>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <a href="index.html#uslugi">Услуги</a>
+      <a href="tseny.html">Цены</a>
+      <a href="index.html#salony">Офисы</a>
+      <a href="#contacts">Контакты</a>
+      <div class="nav__mobile-actions">
+        <a class="btn btn--dark btn--block" href="otpravit-foto.html">Отправить фото</a>
+        <a class="btn btn--outline btn--block" href="tel:+79260407405">+7 926 040-74-05</a>
+      </div>
+    </nav>
+
+    <a class="header__phone" href="tel:+79260407405">
+      <svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg>
+      +7 926 040-74-05
+    </a>
+    <a class="btn btn--dark btn--sm header__cta" href="otpravit-foto.html">Отправить фото</a>
+    <button class="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню">
+      <svg class="burger__open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="burger__close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="demo-banner">
+  <div class="container demo-banner__inner">
+    <strong>Примеры оформления.</strong>
+    <span>Это три направления, а не готовая главная. Можно выбрать одно и доработать.</span>
+  </div>
+</div>
+
+<main id="main">
+  <section class="style-lab">
+    <div class="container">
+      <div class="style-lab__head">
+        <p class="eyebrow">Оформление</p>
+        <h1>Три варианта в стиле таблички</h1>
+        <p>Взял за основу вывеску: жёлтый фон, чёрные лучи, полутон, красный диагональный блок и контурные буквы. Ниже — три способа перенести этот характер на сайт: от почти точного постера до спокойной витрины.</p>
+        <div class="style-lab__tags">
+          <span class="badge badge--yellow">Жёлтый + красный</span>
+          <span class="badge">Лучи и полутон</span>
+          <span class="badge badge--blue">Контурная типографика</span>
+        </div>
+      </div>
+
+      <div class="style-examples">
+        <article class="style-example">
+          <div class="style-example__visual">
+            <div class="poster">
+              <div class="poster__dots"></div>
+              <div class="poster__rays"></div>
+              <div class="poster__top">
+                <div class="poster__brand">
+                  <span class="poster__mark">Ц</span>
+                  <span class="poster__word">ИФРА</span>
+                </div>
+                <div class="poster__sub">ФОТОЦЕНТР</div>
+                <div class="poster__chips" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="poster__hours">ГРАФИК<br>РАБОТЫ</div>
+                <div class="poster__time">ПН–ПТ: 9:00–20:00<br>СБ–ВС: 9:00–19:00</div>
+              </div>
+              <svg class="poster__red" viewBox="0 0 600 240" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 42 600 0v240H0Z" fill="#c62828"/>
+                <path d="M0 42 600 0" fill="none" stroke="#101010" stroke-width="6"/>
+              </svg>
+              <div class="poster__contact">
+                <span>CIFRA-ZVEN@MAIL.RU</span>
+                <span>8 (925) 040-74-05</span>
+              </div>
+            </div>
+          </div>
+          <div class="style-example__copy">
+            <span class="style-example__num">01</span>
+            <h2>Афиша</h2>
+            <p>Максимально близко к табличке. Такой вариант громко работает на главной, в соцсетях и на печатных афишах.</p>
+            <ul class="style-features">
+              <li>Жёлтый фон, чёрные лучи и полутон</li>
+              <li>Красный диагональный блок с контактами</li>
+              <li>Крупные контурные буквы и телефон</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="style-example">
+          <div class="style-example__visual">
+            <div class="mini-site">
+              <div class="mini-site__chrome" aria-hidden="true">
+                <i></i><i></i><i></i>
+                <span class="mini-site__url">cifra-zven.ru</span>
+              </div>
+              <div class="mini-site__hero">
+                <div class="mini-site__halftone"></div>
+                <div class="mini-site__red"></div>
+                <div class="mini-site__copy">
+                  <span class="mini-site__eyebrow">Звенигород · Голицыно</span>
+                  <h3>Печать фото<br><em>от 50 ₽</em></h3>
+                  <p>Документы, холст, полиграфия. Отправьте файлы — заберёте в удобном офисе.</p>
+                  <div class="mini-site__actions">
+                    <span class="mini-btn mini-btn--dark">Отправить фото</span>
+                    <span class="mini-btn">Цены</span>
+                  </div>
+                </div>
+                <div class="mini-site__badge"><span><strong>5</strong>офисов</span></div>
+              </div>
+              <div class="mini-site__cards">
+                <div><strong>10×15</strong><span>от 50 ₽</span></div>
+                <div><strong>Документы</strong><span>750 ₽</span></div>
+                <div><strong>A4</strong><span>200 ₽</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="style-example__copy">
+            <span class="style-example__num">02</span>
+            <h2>Сайт-афиша</h2>
+            <p>Тот же характер, но аккуратнее для чтения. Подходит, если хочется яркую главную без визуального шума.</p>
+            <ul class="style-features">
+              <li>Жёлтый первый экран с красным акцентом</li>
+              <li>Крупные цены и понятные кнопки</li>
+              <li>Лучи и полутон — только как фактура</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="style-example">
+          <div class="style-example__visual">
+            <div class="social-board">
+              <div class="social-board__sun"></div>
+              <div class="social-post">
+                <span class="social-post__kicker">Фото на документы</span>
+                <strong>750<small> ₽</small></strong>
+                <span class="social-post__note">второй комплект — 350 ₽</span>
+                <span class="social-post__logo">Цифра · фотоцентр</span>
+              </div>
+              <div class="social-board__tags">
+                <div class="social-tag social-tag--yellow">
+                  <span>Фото 10×15</span>
+                  <strong>50 ₽</strong>
+                </div>
+                <div class="social-tag social-tag--red">
+                  <span>Печать A4</span>
+                  <strong>200 ₽</strong>
+                </div>
+              </div>
+              <div class="social-hours">Пн–Пт<strong>9:00–20:00</strong></div>
+            </div>
+          </div>
+          <div class="style-example__copy">
+            <span class="style-example__num">03</span>
+            <h2>Витрина</h2>
+            <p>Стиль для карточек, ценников и постов. Его можно использовать в VK, Telegram и на печатных ценниках в офисе.</p>
+            <ul class="style-features">
+              <li>Контурные плашки и наклон</li>
+              <li>Крупная цена как главный акцент</li>
+              <li>Одинаково работает в соцсетях и на печати</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="style-lab__note">
+        <strong>Что дальше:</strong>
+        <span>выберите направление — и я перенесу его на главную. Два остальных можно оставить для афиш, соцсетей и ценников.</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contacts">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="12" fill="#101010"/>
+            <rect x="8" y="11" width="24" height="18" rx="3" fill="#FFDD2D"/>
+            <circle cx="15" cy="17" r="2" fill="#101010"/>
+            <path d="M10 26l6-6 4 4 3-3 7 5H10z" fill="#101010"/>
+          </svg>
+          <span class="logo__word"><strong>цифра</strong><span>фотоцентр</span></span>
+        </a>
+        <p>Печать фотографий, фото на документы, холст и полиграфия в Звенигороде и Голицыно.</p>
+        <div class="footer__contacts">
+          <a href="tel:+79260407405">+7 926 040-74-05</a>
+          <a href="mailto:cifra-zven@mail.ru">cifra-zven@mail.ru</a>
+          <a href="https://t.me/Cifra_zvenigoli" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </div>
+        <p class="footer__requisites">ИП Глебов Роман Олегович<br>ОГРНИП 315503200008731</p>
+      </div>
+
+      <div>
+        <p class="footer__title">Документы</p>
+        <div class="footer__links">
+          <a href="politika.html">Политика конфиденциальности</a>
+          <a href="politika.html#soglasie">Согласие на обработку</a>
+          <a href="stili.html">Варианты оформления</a>
+          <a href="https://vk.com/cifra_zven" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span data-year>2026</span> Фотоцентр «Цифра».</p>
+      <p>Не является публичной офертой.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

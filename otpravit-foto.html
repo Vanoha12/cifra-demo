@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отправить фото на печать — фотоцентр «Цифра»</title>
+<meta name="description" content="Отправьте фото на печать онлайн: загрузите файлы, выберите офис, услугу и формат. Демо-форма без отправки данных.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/styles.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Фотоцентр «Цифра»">
+<meta property="og:title" content="Отправить фото на печать — фотоцентр «Цифра»">
+<meta property="og:description" content="Загрузите файлы, выберите офис и услугу. Демо-форма без отправки данных.">
+</head>
+<body data-page="upload">
+<a class="skip-link" href="#main">К содержанию</a>
+
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/>
+  </symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 16V4M7 9l5-5 5 5"/>
+    <path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/>
+  </symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M12 11v5M12 8h.01"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m4 12 5 5L20 6"/>
+  </symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <path d="M14 2v6h6"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 17 17 7M7 7h10v10"/>
+  </symbol>
+</svg>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="12" fill="#101010"/>
+        <rect x="8" y="11" width="24" height="18" rx="3" fill="#FFDD2D"/>
+        <circle cx="15" cy="17" r="2" fill="#101010"/>
+        <path d="M10 26l6-6 4 4 3-3 7 5H10z" fill="#101010"/>
+      </svg>
+      <span class="logo__word"><strong>цифра</strong><span>фотоцентр</span></span>
+    </a>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <a href="index.html#uslugi">Услуги</a>
+      <a href="tseny.html">Цены</a>
+      <a href="index.html#salony">Офисы</a>
+      <a href="#contacts">Контакты</a>
+      <div class="nav__mobile-actions">
+        <a class="btn btn--dark btn--block" href="otpravit-foto.html" aria-current="page">Отправить фото</a>
+        <a class="btn btn--outline btn--block" href="tel:+79260407405">+7 926 040-74-05</a>
+      </div>
+    </nav>
+
+    <a class="header__phone" href="tel:+79260407405">
+      <svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg>
+      +7 926 040-74-05
+    </a>
+    <a class="btn btn--dark btn--sm header__cta" href="otpravit-foto.html">Отправить фото</a>
+    <button class="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню">
+      <svg class="burger__open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="burger__close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Отправить фото</span>
+      </nav>
+      <p class="eyebrow">Онлайн-заявка</p>
+      <h1>Отправить фото</h1>
+      <p class="page-hero__lead">Загрузите файлы, выберите офис и услугу. Оператор проверит заказ, подтвердит цену и срок.</p>
+      <div class="page-hero__badges">
+        <span class="badge badge--yellow">Демо-режим</span>
+        <span class="badge">Без онлайн-оплаты</span>
+        <span class="badge badge--blue">Файлы не отправляются</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="price-note upload-note">
+      <svg width="18" height="18" aria-hidden="true"><use href="#i-info"/></svg>
+      <span><strong>Это макет.</strong> Форма не отправляет файлы на сервер. Оформленная заявка сохранится только в этом браузере — в истории на 14 дней.</span>
+    </div>
+
+    <section class="order-history" id="order-history" hidden aria-labelledby="order-history-title">
+      <div class="order-history__head">
+        <div>
+          <p class="eyebrow">История</p>
+          <h2 id="order-history-title">Последние заявки</h2>
+          <p class="order-history__hint">За последние 14 дней. Хранятся только в этом браузере, без файлов.</p>
+        </div>
+        <button class="order-history__clear" type="button" id="clear-history">Очистить историю</button>
+      </div>
+      <div class="order-history__list" id="order-history-list"></div>
+    </section>
+
+    <div class="upload-layout">
+      <div>
+        <div class="form-card" id="form-card">
+          <form id="upload-form" novalidate>
+            <div class="form-section">
+              <div class="form-section__head">
+                <h2>1. Файлы</h2>
+                <span>до 10 штук</span>
+              </div>
+
+              <div class="dropzone" id="dropzone">
+                <input class="dropzone__input" type="file" id="photos" name="photos" accept="image/*,.pdf" multiple>
+                <label for="photos">
+                  <span class="dropzone__icon">
+                    <svg width="24" height="24" aria-hidden="true"><use href="#i-upload"/></svg>
+                  </span>
+                  <span class="dropzone__title">Перетащите фото сюда</span>
+                  <span class="dropzone__hint">Или выберите на телефоне. JPG, PNG, PDF — до 20 МБ каждый.</span>
+                  <span class="btn btn--outline btn--sm dropzone__button">Выбрать файлы</span>
+                </label>
+              </div>
+              <p class="field__error" id="files-error" hidden></p>
+              <div class="file-list" id="file-list" aria-live="polite"></div>
+              <p class="file-summary" id="file-summary">Файлы не выбраны</p>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section__head">
+                <h2>2. Заказ</h2>
+                <span>обязательные поля отмечены *</span>
+              </div>
+
+              <div class="field-grid field-grid--three">
+                <div class="field">
+                  <label for="service">Услуга <span class="req">*</span></label>
+                  <select id="service" name="service" required>
+                    <option value="">Выберите услугу</option>
+                    <option value="Печать фото">Печать фото</option>
+                    <option value="Фото на документы">Фото на документы</option>
+                    <option value="Широкий формат и холст">Широкий формат и холст</option>
+                    <option value="Полиграфия">Полиграфия</option>
+                    <option value="Копирование и сканирование">Копирование и сканирование</option>
+                    <option value="Другое">Другое</option>
+                  </select>
+                  <p class="field__error" hidden></p>
+                </div>
+
+                <div class="field">
+                  <label for="format">Формат</label>
+                  <select id="format" name="format">
+                    <option value="Подскажет оператор">Подскажет оператор</option>
+                    <option value="10×15">10×15</option>
+                    <option value="15×21">15×21</option>
+                    <option value="21×30 (A4)">21×30 (A4)</option>
+                    <option value="30×40 (A3)">30×40 (A3)</option>
+                    <option value="40×60 (A2)">40×60 (A2)</option>
+                    <option value="60×90 (A1)">60×90 (A1)</option>
+                    <option value="Свой размер">Свой размер</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="quantity">Количество</label>
+                  <input id="quantity" name="quantity" type="number" min="1" step="1" value="1" inputmode="numeric">
+                </div>
+              </div>
+
+              <div class="field-grid" style="margin-top:16px">
+                <div class="field field--full">
+                  <label for="branch">Офис <span class="req">*</span></label>
+                  <select id="branch" name="branch" required>
+                    <option value="">Выберите офис</option>
+                    <option value="Звенигород, мкр. Супонево, 3А">Звенигород, мкр. Супонево, 3А</option>
+                    <option value="Звенигород, ул. Комарова, 17">Звенигород, ул. Комарова, 17</option>
+                    <option value="Звенигород, ул. Белинского, 2">Звенигород, ул. Белинского, 2</option>
+                    <option value="Голицыно, Звенигородское ш., 16А">Голицыно, Звенигородское ш., 16А</option>
+                    <option value="Голицыно, Советская ул., 1Б (в МФЦ)">Голицыно, Советская ул., 1Б (в МФЦ)</option>
+                  </select>
+                  <p class="field__error" hidden></p>
+                </div>
+
+                <div class="field">
+                  <label for="name">Имя <span class="req">*</span></label>
+                  <input id="name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required>
+                  <p class="field__error" hidden></p>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Телефон <span class="req">*</span></label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 ___ ___-__-__" required>
+                  <p class="field__error" hidden></p>
+                </div>
+
+                <div class="field field--full">
+                  <label for="comment">Комментарий</label>
+                  <textarea id="comment" name="comment" placeholder="Ссылка на Яндекс.Диск, пожелания по кадрированию, срок"></textarea>
+                  <p class="field__hint">Если файлов много или они тяжёлые — вставьте ссылку на облако.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-section">
+              <div class="form-section__head">
+                <h2>3. Подтверждение</h2>
+              </div>
+
+              <label class="consent" for="consent">
+                <input id="consent" name="consent" type="checkbox" required>
+                <span>Даю согласие на обработку персональных данных и принимаю <a href="politika.html" target="_blank" rel="noopener noreferrer">политику конфиденциальности</a>. <span class="req">*</span></span>
+              </label>
+              <p class="field__error" id="consent-error" hidden></p>
+
+              <div class="form-submit">
+                <button class="btn btn--dark" type="submit">
+                  <svg width="18" height="18" aria-hidden="true"><use href="#i-upload"/></svg>
+                  Отправить заявку
+                </button>
+                <p class="form-submit__note">Демо-режим: файлы никуда не отправятся. Заявка сохранится в истории этого браузера на 14 дней.</p>
+              </div>
+
+              <p class="form-error" id="form-error" hidden role="alert"></p>
+              <noscript><p class="form-error">Для загрузки файлов и проверки формы нужен JavaScript. Позвоните нам: <a href="tel:+79260407405">+7 926 040-74-05</a>.</p></noscript>
+            </div>
+          </form>
+        </div>
+
+        <div class="success" id="upload-success" hidden>
+          <div class="success__icon">
+            <svg width="30" height="30" aria-hidden="true"><use href="#i-check"/></svg>
+          </div>
+          <h2 id="success-title" tabindex="-1">Заявка оформлена</h2>
+          <p>Это демонстрация: заявка сохранена в этом браузере на 14 дней. При следующем заходе на эту страницу она появится в блоке «Последние заявки». Файлы никуда не отправлены. В реальной версии оператор получил бы заявку и связался с вами.</p>
+          <div class="success__summary" id="success-summary"></div>
+          <div class="success__actions">
+            <a class="btn btn--outline" href="tel:+79260407405">
+              <svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg>
+              Позвонить
+            </a>
+            <button class="btn btn--dark" type="button" id="new-request">Новая заявка</button>
+          </div>
+          <p class="success__note">Демо-режим · заявка сохранена только в этом браузере на 14 дней.</p>
+        </div>
+      </div>
+
+      <aside class="upload-aside" aria-label="Подсказки по отправке">
+        <div class="help-card help-card--yellow">
+          <h2>Пришлите оригиналы</h2>
+          <p>Не сжимайте фото в мессенджерах: качество печати зависит от исходного файла.</p>
+          <ul class="help-list">
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg><span>Лучше JPG или PNG без сильного сжатия</span></li>
+            <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg><span>До 10 файлов, до 20 МБ каждый</span></li>
+          </ul>
+        </div>
+
+        <div class="help-card">
+          <h2>Файлов много?</h2>
+          <p>Добавьте ссылку на Яндекс.Диск в комментарий или напишите на почту — подскажем, как передать файлы.</p>
+          <div class="help-card__actions">
+            <a class="btn btn--outline btn--sm" href="mailto:cifra-zven@mail.ru">
+              Почта
+              <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--outline btn--sm" href="https://t.me/Cifra_zvenigoli" target="_blank" rel="noopener noreferrer">
+              Telegram-канал
+              <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="help-card">
+          <h2>Нужна помощь?</h2>
+          <p>Телефоны, адреса и часы работы — на странице офисов. Подскажем по формату, цене и срокам.</p>
+          <a class="btn btn--dark btn--sm" href="index.html#salony">
+            <svg width="16" height="16" aria-hidden="true"><use href="#i-pin"/></svg>
+            Офисы и телефоны
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" id="contacts">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="12" fill="#101010"/>
+            <rect x="8" y="11" width="24" height="18" rx="3" fill="#FFDD2D"/>
+            <circle cx="15" cy="17" r="2" fill="#101010"/>
+            <path d="M10 26l6-6 4 4 3-3 7 5H10z" fill="#101010"/>
+          </svg>
+          <span class="logo__word"><strong>цифра</strong><span>фотоцентр</span></span>
+        </a>
+        <p>Печать фотографий, фото на документы, холст и полиграфия в Звенигороде и Голицыно.</p>
+        <div class="footer__contacts">
+          <a href="tel:+79260407405">+7 926 040-74-05</a>
+          <a href="mailto:cifra-zven@mail.ru">cifra-zven@mail.ru</a>
+          <a href="https://t.me/Cifra_zvenigoli" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </div>
+        <p class="footer__requisites">ИП Глебов Роман Олегович<br>ОГРНИП 315503200008731</p>
+      </div>
+
+      <div>
+        <p class="footer__title">Документы</p>
+        <div class="footer__links">
+          <a href="politika.html">Политика конфиденциальности</a>
+          <a href="politika.html#soglasie">Согласие на обработку</a>
+          <a href="stili.html">Варианты оформления</a>
+          <a href="https://vk.com/cifra_zven" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span data-year>2026</span> Фотоцентр «Цифра».</p>
+      <p>Не является публичной офертой.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar" role="navigation" aria-label="Быстрые действия">
+  <a class="btn btn--outline" href="tel:+79260407405">
+    <svg width="17" height="17" aria-hidden="true"><use href="#i-phone"/></svg>
+    Позвонить
+  </a>
+  <a class="btn btn--dark" href="tseny.html">
+    <svg width="17" height="17" aria-hidden="true"><use href="#i-file"/></svg>
+    Цены
+  </a>
+</div>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
